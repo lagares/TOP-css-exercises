@@ -1,0 +1,119 @@
+@font-face {
+    font-family: "Norse";
+    src:
+        local("Norse-Bold.otf"),
+        url("Norse-Bold.otf") format("opentype");
+}
+body {
+    background: #000;
+    display: flex;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: stretch;
+    height: 100vh;
+    overflow: hidden;
+}
+.container {
+    display: flex;
+    height: 100%;
+    margin: auto;
+    max-width: 80%;
+}
+.sidebar {
+    background-image: url(irene-demetri-9qlWQc9r9Us-unsplash.jpg);
+    background-size: cover;
+    color: #fff;
+    position: relative;
+    width: 34%;
+    a {
+        color: #fff;
+    }
+    .logo {
+        background: rgba(0,0,0,.3);
+        display: flex;
+        height: 5rem;
+        padding: 1rem 0;
+        position: relative;
+        top: 25%;            
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+        h1 {
+            font-family: Norse;
+            font-size: 4rem;
+            line-height: 1rem;
+        }
+    }
+    .credit {
+        position: absolute;
+        bottom: 0;
+        margin: 2rem;
+    }
+}
+.main {
+    background-color: #eee;
+    padding-top: 15%;
+    width: 66%;
+    h2 {
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: 1rem 3rem;
+    }
+    form {
+        padding: 0;
+        fieldset {
+            border: none;
+            padding: 2rem 3rem;
+        }
+        h2 {
+            background-color: #fff;
+            margin: 0;
+            padding: 1rem 0 0 3rem;
+        }
+        .inputs {
+            background-color: #fff;
+            box-shadow: 0 5px 6px rgba(0,0,0,.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 2rem 3rem;
+        }
+        .submits {
+            a {
+                color: purple;
+                font-weight: bold;
+                text-decoration: none;
+            }
+        }
+        label {
+            grid-column-start: span 2;
+            > p {
+                font-size: .7rem;
+                letter-spacing: 1px;
+                line-height: 1.5;
+                margin: 0;
+                text-transform: uppercase;
+            }
+            input {
+                border: 1px solid #ddd;
+                border-radius: .25rem;
+                height: 1.5rem;
+                width: 100%;
+                &:focus {
+                    border-color: #33d;
+                    box-shadow: 1px 1px 2px rgba(0,0,0,.2);
+                }
+                &:invalid {
+                    border-color: #d00;
+                }
+            }
+        }
+        input[type="submit"] {
+            background: purple;
+            border: none;
+            border-radius: .5rem;
+            color: #fff;
+            font-size: 1rem;
+            padding: 1rem 4rem;
+        }
+    }
+}
